@@ -1,0 +1,14 @@
+{
+  "name": "sst-report-generator",
+  "version": "1.0.0",
+  "description": "SST Report Generator for Wellcoat Tech",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "WELLCOAT TECH",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.1"
+  }
+}
