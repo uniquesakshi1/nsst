@@ -414,7 +414,9 @@
       opacity: 1;
     }
   </style>
-  </head>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</head>
 <body>
   <div class="wrap">
     <h1>🧪 SST Report Generator (Single HTML)</h1>
@@ -561,10 +563,6 @@
       }
     }
   });
-
-  // ये लाइब्रेरीज़ अब npm के माध्यम से लोड होंगी
-  const html2canvas = require('html2canvas');
-  const { jsPDF } = require('jspdf');
 
   const $ = (id) => document.getElementById(id);
   const state = { logo: "", before: "", after: "" };
@@ -1033,6 +1031,7 @@
     document.body.removeChild(tempEl);
 
     const img = canvas.toDataURL('image/jpeg', 0.7);
+    const { jsPDF } = window.jspdf;
     
     const pdf = new jsPDF({ 
       unit: 'pt', 
