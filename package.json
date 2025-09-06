@@ -4,11 +4,22 @@
   "description": "SST Report Generator for Wellcoat Tech",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
   },
   "author": "WELLCOAT TECH",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^28.2.1"
+    "electron": "^28.2.1",
+    "electron-builder": "^24.9.1",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
+  },
+  "build": {
+    "appId": "com.yourcompany.sst",
+    "productName": "SST Report Generator",
+    "win": {
+      "icon": "icon.png"
+    }
   }
 }
